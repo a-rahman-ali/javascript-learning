@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <!-- The following is valid but it is not a good practice -->
+    <!-- <script>
+        x = 20 // without declaration, semi-colon
+        document.write("x = " + x) 
+        document.write("This is not a good practice")
+    </script> -->
+
+    <script type="text/javascript">
+        "use strict";
+        document.write("This is giving error check in inspect -> console <br>")
+        // now this will give error in the console of the browser inspect 
+        x = 10 // without declaration, semi-colon
+        document.write("x = " + x) 
+    </script>
+
+    <!-- the following would also work as we are using text/javascript -->
+    <script type="text/javascript">
+        "use strict";
+        // x = 20 // without declaration, semi-colon
+        var x; 
+        x = 20 // this won't give any error
+        document.write("x = " + x) 
+    </script>
+
+</head>
+<body>
+</body>
+</html>
