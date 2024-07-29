@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DOM JS Example</title>
+    <script>
+        function bodyLoad(){
+            window.document.images[0].src="../../DOM Hierarchy.png"
+            window.document.forms[0].elements[1].value="Register";
+            window.document.forms[1].elements[1].value="Login";
+            // This causes the problem whenever there is a change in position of button
+            // as the pages don't remain constant
+            // window.document.forms[0].elements[1].value="Login";
+        }
+    </script>
+</head>
+<body onload="bodyLoad()">
+    <div>
+        <img width="100" height="100" border="1">
+    </div>
+    <div>
+        <form>
+            <h3>Register</h3>
+            <!-- User Name : <input type="text"> <input type="button"> -->
+            <p>The following problem is due to change in the position of the elements of the UI and the fixed js code written in script</p>
+            User Name : <input type="button"> <input type="text">
+        </form>
+    </div>
+    <div>
+        <form>
+            <h3>Login</h3>
+            Email : <input type="email"> <input type="button">
+        </form>
+    </div>
+</body>
+</html>
