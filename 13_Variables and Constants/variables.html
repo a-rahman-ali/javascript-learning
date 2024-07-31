@@ -1,0 +1,89 @@
+<script>
+    "use strict";
+    document.write("-> var is function scoped <br> -> supports declaration, initialization, assignment <br> -> supports hoisting & shadowing <br>")
+    function f1(){
+        z = 10;
+        document.write("z = " + z + "<br>") // hoisted variable
+        var x; // declaration
+        x = 10; // assignment
+        if(x == 10){
+            // can be acessed within the function and outside aswell
+            var y = 20; // initialization
+            y = 30;
+            var y = 50 // Shadowing/Re-declaring
+        }
+        document.write("x = " + x + "<br>" + "y = " + y + "<br> <hr>");
+        var z; // hoisting
+    }
+    f1();
+
+    document.write("-> let is block scoped <br> -> supports declaration, initialization, assignment <br> -> doesn't supports hoisting & shadowing <br>");
+    // the following gives error due to hoisting is not supported by 'let'
+    // c = 30;
+    // document.write("c = " + c + "<br>")
+    function f2(){
+        let a;
+        a = 10;
+        if(a == 10){
+            let b = 20;
+            b = 30;
+            document.write("a = " + a + "<br>" + "b = " + b + "<br> <hr>");
+            // Shadowing not supported
+            // let b = 90;
+        }
+        // the following gives error, due to we're trying to access b
+        // document.write("a = " + a + "<br>" + "b = " + b + "<br> <hr>");
+        
+    }
+    // let c;
+    f2();
+
+    document.write("-> const is block scoped <br> -> supports initialization <br> -> doesn't suport declaration & assignment <br> -> doesn't supports hoisting & shadowing <br>");
+    function f3(){
+        const i = 45;
+        document.write("i = " + i + "<br>");
+        // i = 34; // this is not allowed
+        // document.write("i = " + i + "<br>");
+        const j = prompt("Enter the value for j");
+        document.write("j = " + j + "<br> <hr>");
+        
+        // only declaration, assignment is not supported
+        // const j;
+        // j = 33;
+    }
+    f3();
+    
+    document.write("Global Variable Scope");
+    document.write("If var, let, const declared outside function, then it is global <br>");
+    document.write("-> const is block scoped <br> -> supports initialization <br> -> doesn't suport declaration & assignment <br> -> doesn't supports hoisting & shadowing <br>");
+    var alpha = 141;
+    document.write("This is a global scoped variable. aplha = " + alpha + "<br>");
+    let beta = "ar";
+    document.write("This is a global scoped variable. beta = " + beta + "<br>");
+    const gamma = 2346;
+    document.write("This is a global scoped variable. gamma = " + gamma + "<br>");
+    function func1(){
+        // by appending it with window.variable_name we can make it global scope
+        window.msg = "hello of func1";
+        document.write("func1() -> alpha, beta, gamma : " + alpha + ", " + beta + ", " + gamma + "<br>");
+        document.write("func1() msg : " + msg + "<br>");
+    }
+    function func2(){
+        document.write("func2() -> alpha, beta, gamma : " + alpha + ", " + beta + ", " + gamma + "<br>");
+        document.write("func2() msg : " + msg + "<br>");
+    }
+    func1();
+    func2();
+    document.write("<hr>");
+    
+    document.write("Variable Naming Conventions <br>");
+    document.write("Name must start with alphabet or _ <br>");
+    document.write("Name can have numbers and special characters <br>");
+    document.write("Can't start with number or other special characters <br>");
+    document.write("Can't contain spaces, periods[.] <br>");
+    document.write("Length must be max 255 chars <br>");
+    document.write("** Variables starting with _ means that they are 'needed to be implemented' <br>");
+    
+    document.write("<hr>");
+
+</script>
