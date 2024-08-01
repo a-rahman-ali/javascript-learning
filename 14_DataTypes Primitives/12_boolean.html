@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Boolean Demo</title>
+    <script src="12_boolean.js"></script>
+</head>
+
+<body>
+    <h3>Stock</h3>
+    <div>
+        <input type="checkbox" id="optStock" checked onchange="changeLabel()"> <span id="lblCheckBox">Available</span>
+    </div>
+
+    <h3>Payment Details</h3>
+    <dl>
+        <dt>Card Number</dt>
+        <dd><input type="text" onkeyup="verifyCard()" id="txtCard"></dd>
+        <dt>CVV</dt>
+        <dd><input type="text" onkeyup="verifyCVV()" disabled id="txtCvv" size="4"></dd>
+    </dl>
+    <button disabled id="btnPay">Pay</button>
+</body>
+
+</html>
