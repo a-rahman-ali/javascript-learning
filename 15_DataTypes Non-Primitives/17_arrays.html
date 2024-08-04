@@ -1,0 +1,59 @@
+<pre>
+    ++ Configuration of Array
+    - Array configuration comprises of 2 phases
+        a) Declaration
+        b) Initialization
+    - Declaration is same as general variables.
+    - Initialization or Assignment of memory is mandatory.
+    - Memory is assigned or initialized for array by using 2 methods
+        a) []      - meta character
+        b) Array() -- constructor
+
+        var products; // Declaration
+        products = []; // Assignment
+        products = new Array();
+    - [] allows range of values | allows multiple values
+    - new Array()
+        new     => Dynamic Memory Allocating Operator
+        Array() => Creates an array in memory
+        ()      => constructor
+        (size)  => You can define size, but size is not constant.
+
+    - Syntax:
+        var products = [];
+        var categories = new Array();
+
+    ++ Storing values in array:
+    - Values are stored in array with reference of its properties.
+    - Array Property maps to its index number. (refer to example-1 18_arrays.html)
+            Property "0"  =>  Index 0
+            values[0]
+            values["0"]
+    - You can store any type of values in array. It can be primitive or non-primitive. (refer to example-2 18_arrays.html)
+    
+    ++ Array Manipulations: (see Example-3 in 18_arrays.html)
+    Read Array Elements:
+        1. toString()   -> uses ',' as delimiter
+        2. join()       -> uses custom delimiter
+        3. slice()      -> fetches values b/w specified indices
+        4. find()       -> searches for value based on given condition and retruns the 1st occurence value 
+        5. filter()     -> similar to find but returns all the values that match the condition. Returns an array.
+        6. map()        -> It is implicit iterator, reads every element and presents using markup.
+        7. for iterator -> for..in [It is used to read all properties], for..of [It is used to read all values]
+        8. for loop     -> 
+    
+    ++ Adding New Elements into Array //see 24_array adding elements
+        push()      :   It adds new element(s) as last item.
+        unshift()   :   It adds new element(s) as first item.
+        splice()    :   It adds new element(s) at specified index
+            splice(index, deleteCount, newItems);
+    
+    ++ Remove Elements from Array  // see 25_array removing elements
+        pop()         :   It removes and returns last item
+        shift()       :   It removes and returns first item
+        splice(1,2)   :   It removes elements b/w specified indices
+
+    ++ Sort Array Elements // see 27_sorts.html
+        - sort()    : sorts elements in ascending order
+        - reverse() : 
+</pre>
