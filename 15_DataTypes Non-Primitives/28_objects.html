@@ -1,0 +1,77 @@
+<pre>
+    ++ Objects
+    - Object is used to keep all related data and logic together.
+    - The concept of object was introduced in early 1960's by "Alan Kay".
+    - Ole-Johan, Kristian Nygaard introduced the OOPs Concept generally.
+
+    {
+        "Key" : "Value",
+        "Key" : function(){ }
+    }
+    - If Javascript is defining n object then every key must be string and value can be of any type.
+            {
+                Name: "Samsung TV",
+                Price: 56000.34,
+            }
+    - If object contains only data then it is reffered as JSON.
+            [Javascript Object Notation]
+    - JSON is a format for data.
+    - Popular data formats are XML, XML Atom, JSON, JSONP etc.
+
+    - Data is accessed with the reference name of Object name
+        tv.Name;                        // getter - read value
+        tv.Name = "Samsung LED TV";     // setter - store new value
+    - Object enables reusability.
+    - [] -- Array
+    - {} -- Object
+    - [{}, {}, {}] -- Array of Objects
+
+    // See 29_objects example.html, 30_objects ex1.html for examples of objects
+
+    ++ Accessing Data from API
+    - Javascript Promises concepts can be used to fetch the data from API
+    
+
+    ++ Object with Methods // See 31_objects.html, 32_objects ex2.html
+    - Object comprises of related data and logic
+    - Data is defined in property and logic in function
+            var obj = {
+                property: value,
+                method: function(){}
+            }
+    - But JSON is not about functionality, it is about data.
+    - Object related properties and methods are accessed within object using "this" keyword.
+    - You can access outside by using object name.
+    
+    FAQ: How to read all the properties of object?
+    Ans: By using "for..in" iterator
+
+    FAQ: How to know about the datatype of every property?
+    Ans: Make use of "typeof" operator on the property
+
+    FAQ: How to verify any property in object? [Available or Not]
+    Ans: By using "in" operator.
+
+    <!--
+        <script>
+            var product = {
+                Name: "TV",
+                Price: 45004.53
+            }
+            document.write("Stock" in product);
+        </script>
+    -->
+    
+    FAQ: How to delete any property from an object?
+    Ans: By using "delete" operator
+    <!--
+        <script>
+            var product = {
+                Name: "TV",
+                Price: 45004.53
+            }
+            delete product.Price
+            document.write(`Name = ${product.Name} <br>Price=${product.Price}`);
+        </script>
+    -->
+</pre>
