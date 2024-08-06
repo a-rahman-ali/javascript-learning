@@ -1,0 +1,61 @@
+<pre>
+    API Interactions
+
+    * What is Distributed Computing?
+    - Distributed computing allows 2 different applications running on 2 different machines can share information between them.
+    - Distributed computing allows 2 different applications running in 2 different processes of same machine to share information.
+
+    Distributed Computing Technologies
+    - CORBA(Common Object Request Broker Architecture)
+    - DCOM(Distributed Component Object Model)
+    - RMI(Remote Method Invocation)  
+    - EJB(Enterprise Java Beans)
+    - Web Services (Common in all the services)
+    - Remoting etc...
+
+    Web Service Specifications
+    - SOAP(Service Oriented Architecture Protocol)
+        Consumer makes XML request - Provider sends XML response
+        
+    - REST(Representational State Transfer)
+        Consumer Query request - Provider sends XML response | JSON response
+
+    - JSON(Javascript Object Notation)
+        Consumer sends JSON request - Provider sends JSON response.
+
+    Features of JSON:
+    - Light weight
+    - Faster
+    - Not infected by virus
+    - Can't be blocked by FireWall
+    - Easy to transport
+    - Compatible with every browser
+
+    -> API uses both JSON and XML
+    How Javascript can handle API requests?
+    Ans: Javascript uses "XmlHttpRequest" object
+        jQuery      : $.ajax()      => XMLHttpRequest
+        Angular     : HttpClient    => XMLHttpRequest
+        React       : Axios         => XMLHttpRequest
+        Javascript  : Fetch         => XMLHttpRequest
+
+    -Javascript uses a Promise called fetch() to communicate with API.
+    - Promise is a function that handles specified functions with set of callbacks.
+    - Callbacks handle various functionalities depending on state and situation.
+    - Fetch is a Javascript promise which handles communication with API and returns data if successful and returns error status if failed.
+
+    Syntax: 
+        fetch('url').then(onSuccess).throw(onFailure).catch();
+        // still some more functions do exist
+    
+    Ex: Working with fetch() and fetching data from JSON file
+
+    1. Create a new folder in a project, say "data"
+    2. Add  new file, say data.json
+    3. Access in html page
+
+    -> See 02_api ex1.html
+
+
+    
+</pre>
