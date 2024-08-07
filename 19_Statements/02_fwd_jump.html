@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Forward Jump</title>
+    <script src="02_fwd_jump.js"></script>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Payment Details</legend>
+        <dl>
+            <dt>Card Number</dt>
+            <dd><input type="text" onkeyup="verifyCard()" id="txtCard"></dd>
+            <dt>CVV</dt>
+            <dd><input disabled onkeyup="verifyCVV()" type="text" id="txtCvv" size="4"></dd>
+            <dt>Expiry Date</dt>
+            <dd>
+                <select disabled onchange="verifyExpiry()" id="lstExpiry">
+                    <option>2024</option>
+                    <option>2025</option>
+                    <option>2026</option>
+                    <option>2027</option>
+                </select>
+            </dd>
+        </dl>
+        <button disabled id="btnPay">Pay</button>
+    </fieldset>
+</body>
+
+</html>
