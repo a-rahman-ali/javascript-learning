@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Mutliple Choice</title>
+    <script src="05_multiple_choice.js"></script>
+</head>
+
+<body>
+    <div class="maincontainer">
+        <div>
+            <h1>Sign In</h1>
+            <div id="userContainer" style="display: block;">
+                <div>
+                    <label><b>Email or Mobile</b></label>
+                    <div>
+                        <input type="text" id="txtUser">
+                        <div id="userError"></div>
+                    </div>
+                </div>
+                <div>
+                    <button onclick="continueClick()">Continue </button>
+                </div>
+            </div>
+            <div id="passwordContainer" style="display: none;">
+                <div>
+                    <label><b>Your Password</b></label>
+                    <div>
+                        <input type="password" id="txtPassword">
+                        <div id="passwordError"></div>
+                    </div>
+                    <div>
+                        <button onclick="loginClick()">LogIn</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
