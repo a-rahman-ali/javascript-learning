@@ -1,0 +1,111 @@
+<pre>
+    Functions in JavaScript
+    - Functions are used in computer programming for "Refactoring".
+    - Refactoring is the process of extracting a function for set of statements so that you can reuse.
+    - Function Architecture
+        Syntax:
+            function Print(){
+
+            }
+    - Every function comprises of 3 parts
+            a) Declaration
+                function Print()
+            b) Signature
+                Print()
+            c) Definition
+                {
+                    // Statements to be executed when function is called;
+                }
+    - You can access any function by using its signature.
+                Print();
+    
+    ++ Function Parameters
+    - Function can be parameterless or parameterized.
+    - Paramterless functions
+            Ex:
+            function PrintNumbers(){
+                for(let i = 0; i < 10; i++) {
+                    document.write(i + " <br>");
+                } 
+            }
+    - Parameters are used to modify the function.
+    - Parameters are classified into 2 types
+        a) Formal Parameters
+        b) Actual Parameters
+    - Formal parameters are defined in function Declaration
+
+            function Print(a)  => a is formal parameter
+            
+    - Actual parameters are defined in function calling
+            
+            function(10)     => 10 is actual parameter
+
+            a = 10;     => a is reference and 10 is value
+
+    - Based on how many parameters are required function is defined as with arguments.
+    - Every parameter in function is required. [Mandatory]
+    - Order of parameter is also mandatory
+
+    - Function can have multiple parameters. All parameters are required and order dependent.
+    - Function can handle any type of parameters
+            a) Primitive
+            b) Non-Primitive
+            c) Function
+    Note: Using a lot of parameters in a function is not recommended/safe for the application.
+           It leads to injection attacks.
+           As per ECMA standards function allows only 1024 params.
+
+    - JavaScript ES6+ introduced "Rest Parameters".
+    - A single Rest Parameter allows multiple arguments.
+
+    - Rest is defined by using "..." followed by parameter name.
+        Syntax:
+            function functionName(...paramName){
+
+            }
+    - Every function can have only one rest parameter.
+            function Name(...one, ...two)   // invalid
+    - Rest parameter must be last in parameter list.
+            function Name(one,...two)   // valid
+            function Name(...two, one)   // invalid
+
+            Function Return Type
+    - Function can be void type, you can define a function that will discard the return value.
+            function Name(){
+
+            }
+    - You can also define function to return any specific value.
+            function Name(){
+                return value;
+            }
+    
+            Anonymous Function // 05_functions_ex4
+    - A function without a name is called as anonymous function.
+            script>
+                (function() {
+                    document.write("Anonymous Function");
+                })();
+            /script>
+    - Anonymous function is used in callbacks.
+            function verify(pwd, success, failure){
+
+            }
+            verify("pwd", function(){ document.write("Invalid Password")}, function(){ document.write("Login Failure")});
+
+    
+            Function Recursion
+    - It is a technique of calling a function within the context of same function.
+            function f1(){
+                f1();
+            }
+    - It is used to design batch operations.
+
+            Function Closure // 08_function ex7.html
+    - Closure is a technique of configuring a function within function and making the result of inner function accessible to outer function.
+
+            Arrow Functions // 09_function ex8.html
+    - It is a shorthand technique of using the functions.
+
+    
+    
+</pre>
