@@ -1,0 +1,232 @@
+<pre>
+    Javascript Statements
+    
+    - In computer programming statement is used to control the execution flow.
+    - Javascript statement are classified into 
+        1. Selection Statement
+            if, else, switch, case, default
+        2. Iteration Statement
+            for...in, for...of
+        3. Looping Statement
+            while, for, do while
+        4. Jumping Statement
+            break, continue, return
+        5. Exception Handling Statement
+            try, catch, throw, finally
+    
+    ++ Selection Statements
+    - Selection Statements are used in decision making
+    - The keywords are
+        if, else, switch, case, default
+    
+    if select:
+    - It is a decision making statement that executes one set of statements when condition is true
+        and the another when condition is false
+    - If select can be defined in various forms
+        a) Forward Jump : It is a decision making where there will not be any alternative
+        b) Simple Decision
+        c) Multilevel Decision
+        d) Mutliple Choices
+
+        ** // see 02_fwd jump.html for an example implementation
+        a) Forward Jump : It is a decision making where there will not be any alternative
+            Syntax:
+                if(condition){
+                    statement(s) to be executed when condition is true;
+                }
+        b) Simple Decision : It is a decision making which comprises of one alternative for given condition.
+            Syntax:
+                if(condition){
+                    statement(s) to be executed when condition is true;
+                }
+                else{
+                    statement(s) to be executed when condition is false;
+                }
+                
+                It is generally called as - "if and else clause" 
+
+            Note: Always don't try to write multiple conditions in one line
+            If you're using multiple conditions in one "if()" container then, error result will display same for all errors.
+            // see 03_simple decision.html 
+        c) Multilevel Decision : It is a decision making which comprises of multiple alternatives for given condition.
+                Syntax:
+                    if(condition-1){
+                        if(condition-2){
+                            statement(s) to be executed when both conditions are true;
+                        }
+                        else{
+                            statement(s) to be executed when condition-2 is false;
+                        }
+                    }
+                    else{
+                        statement(s) to be executed when condition-1 is false;
+                    }
+            // see 04_multilevel decision.html
+        d) Mutliple Choices : It is a decision making which comprises of multiple alternatives for given condition.
+                Syntax:
+                    if(condition-1){
+                        statement(s) to be executed when condition-1 is true;
+                    }
+                    else if(condition-2){
+                        statement(s) to be executed when condition-2 is true;
+                    }
+                    else if(condition-3){
+                        statement(s) to be executed when condition-3 is true;
+                    }
+                    else{
+                        statement(s) to be executed when all conditions are false;
+                    }
+            // see 05_multiple choices.html
+
+        Switch Selector:
+        - Switch is used to control/interrupt the flow of electrons
+        - In electronics switches are of various types
+                a) Push button
+                b) Toggle switch
+                c) Selector
+                d) Joystick switch etc...
+        - Selector switch is used in programming to handle multiple conditions.
+        - It select only the block that matches the given condition.
+        - It reduces the number of conditions to one condition and selects the block that matches the given condition.
+        - It reduces the compile time and complexity.
+                Syntax:
+                    switch(condition){
+                        case condition-1:
+                            statement(s) to be executed when condition-1 is true;
+                            jump_statement;
+                        case condition-2:
+                            statement(s) to be executed when condition-2 is true;
+                            jump_statement;
+                        case condition-3:
+                            statement(s) to be executed when condition-3 is true;
+                            jump_statement;
+                        default:
+                            statement(s) to be executed when all conditions are false;
+                            jump_statement; 
+                    }
+            // see 06_switch selector.html
+        
+        FAQ's:
+        1. Can we define switch without default ?
+        Ans: Yes
+
+        2. Can we define default above or between case?
+        Ans: Yes.
+
+        3. Can we define case without break?
+        Ans: Yes. If break is not defined then it will continue with the next case and will stop when next break occurs or switch ends.
+
+        4. What is break?
+        Ans: It is a jump statement used to terminate the block.
+
+        5. Can we use "return" as jump statement for switch case?
+        Ans: Yes.
+
+        6. What is difference between break and return?
+        Ans: break will terminate the block, but it will still keep the compiler active.
+             return will terminate compiler and exectuion.
+        
+        7. Can we define switch case string type ? What must be the type for case?
+        Ans: Yes. case can use only
+                    a) number
+                    b) string
+                    c) boolean
+                    d) an expression that returns number, string, boolean.
+        
+        8. How to define case for range of values?
+        Ans: By using boolean type expression.
+             If expression's case is boolean then switch value must be boolean.
+             We can define case for range of values by using true in switch and having the case expressions returning boolean values.
+
+        ++ Looping Control Statements
+        - Looping is the process of executing a set of statements repeatedly until the given condition is satisfied.
+        - Looping comprises of 
+                a) Initialization
+                b) Condition
+                c) Counter increment/decrement
+        - Initialization defines when to start
+        - Condition defines when to stop
+        - Counter defines how to proceed
+
+        - Loops are defined by 
+                a) for
+                b) while
+                c) do while
+        for loop:
+        - It is a looping control statement used by developers when exact nomber of iterations are known and iteration count won't change dynamically.
+            Syntax:
+                for(initialization; condition; counter){
+                    statement(s) to be executed;
+                }
+        - You can define initialization, condition and counter outside of for() but it must have cofiguration for all 3
+            Syntax:
+                initialization;
+                for(; ;){
+                    if(condition){
+                        statement(s) to be executed when condition is true;
+                    }
+                    counter;
+                }
+        - You can configure for with any counter [increment or decrement].
+        - Modern Best Practice is using iterations.
+
+        while loop:
+        - It is used when we are not sure about the number of iterations.
+        - Iteration counter will change dynamically.
+        - It can start loop only when condition is true.
+                Syntax:
+                    while(condition){
+                        statement(s) to be executed when condition is true;
+                        counter;
+                    }
+
+        do while loop:
+        - It is similar to while loop but can execute statements atleast once even when the condition is false.
+                Syntax:
+                    do{
+                        statement(s) to be executed when condition is true;
+                        counter;
+                    }while(condition);
+
+        - TASK: Write a Javascript program to convert number into words.
+        
+        ++ Iteraion Statements
+        - Iteration is a Software Design Pattern used to read elements from a collection in sequential order.
+        - Iteration doesn't require initialization, condition and counter.
+        - Iterations are defined in Javascript by using 
+                for...in
+                for...of
+        for...in: It can read and return all properties.
+        for...of: It can read and return all values.
+        - You can terminate the loops and iterators by using jump statements.
+                a) break
+                b) continue
+                c) return
+        break: It terminates the block, but will stay in function
+        continue: It terminates the current iteration and continues with the next iteration.
+                  It skips the counter and continues to next.
+        return : It terminates the execution.
+
+        TASK: Try implementing 4 digit PIN validation. It should block after 3 unsuccessful attempts.
+
+        ++ Exception Handling Statements:
+        - Exception Handling is a Software Design Pattern used to handle errors and exceptions.
+        - In computer programming developers will come across 2 types of errors.
+                    1. Compile Time Errors
+                    2. Run Time Errors
+        - Compiler time errors are syntax errors; due to which the program fails to compile and unable to print output.
+        - Runtime errors: Program is compiled successfully without errors.
+                          When user interacts with program and provides input which is not understandable to compiler then it leads to runtime errors
+                          If any runtime errors occurs in a program that leads to abnormal termination.
+                          It can be handled by using exception handling statements.
+                          It can be handled by using try, catch and finally blocks.
+        - Exception Handling is used in computer programming to avoid abnormal termination.
+        - Exception Handling in Javascript is managed by following statements
+                try     - It is monitoring block        : statement(s) to execute
+                catch   - IT is handler block           : It catches the exception
+                throw   - It is used to throw the error.
+                finally - It contains statements to execute always i.e irrespective of the exception occured or not.
+        
+        - Exception Handling is very important and useful concept in Javascript but when Javascript is being used with HTML we may not find that much use.
+        
+</pre>
