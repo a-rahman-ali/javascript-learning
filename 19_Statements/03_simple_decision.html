@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Simple Decision</title>
+    <script src="03_simple_decision.js"></script>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Payment Details</legend>
+        <dl>
+            <dt>Card Number</dt>
+            <dd><input type="text" id="txtCard"></dd>
+            <dt>CVV</dt>
+            <dd><input type="text" id="txtCvv" size="4"></dd>
+            <dt>Expiry Date</dt>
+            <dd>
+                <select id="lstExpiry">
+                    <option>2024</option>
+                    <option>2025</option>
+                    <option>2026</option>
+                    <option>2027</option>
+                </select>
+            </dd>
+        </dl>
+        <button onclick="payClick()" id="btnPay">Pay</button>
+        <h1 id="msg"></h1>
+    </fieldset>
+
+</body>
+
+</html>
