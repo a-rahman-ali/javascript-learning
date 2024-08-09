@@ -1,0 +1,249 @@
+<pre>
+    Javascript OOPs
+
+    - Real world project development uses various programming systems
+        1. POPS (Process Oriented Programming System)
+        2. OBPS (Object Based Programming System)
+        3. OOPS (Object Oriented Programming System)
+    
+    POPS (Process Oriented Programming System)
+    - It supports low level features
+    - IT can directly interact with hardware
+    - It is faster
+    - It uses less memory
+    Ex: C, Pascal, COBOL
+    - Reusability Issues
+    - Extensibility Issues
+    - Dynamic Memory
+
+    OBPS (Object Based Programming System)
+    - It supports Reusability
+    - It supports Dynamic Memory
+    - Limited Extensibility
+    - Not loosely coupled
+    - More memory than POPS
+    - Security Issues
+    Ex: Javascript, VB
+
+    OOPS (Object Oriented Programming System)
+    - It supports Reusability, Dynamic Memory, Extensibility
+    - Security
+    - Can't directly interact with hardware
+    - Slow
+    - More memory usage
+
+    Ex: Java, C++, C#, TypeScript
+
+    Note : Javascript is not an OOP language. It supports only a few features of OOPs
+    
+    History of OOP
+    - Alan Kay in early 1960's introduced the concept of "Object" into computer programming.
+    - 1967 Johan Ole, Kristian Nygard developed first OOP language "SIMULA" 
+        [Code Reusability]
+        SIMULA 67
+    
+    - Trygve introduced the concept of code seperation. He introduced a framework called "MVC" [Model-View-Controller]
+    - 1972 1st OOP language "Smalltalk" was introduced.
+    - In early 1975 - C++
+    - In early 1990 - Java
+    - In early 2003 - .NET language, TypeScript
+
+                Javascript Modules
+    - A Module is a set of functions, values and classes.
+    - Module resembles a library for building application.
+    - Javascript uses various Module systems
+        a) Common JS
+        b) Require JS
+        c) UMD(Universal Module Distribution)
+        d) AMD(Asynchronous Module Definition)
+    
+    - By default with node.js you will get "Common JS" module system.
+
+    - Every Javascript file is a module.
+    - Module comprises of functions, variables and classes.
+    - Every member in a module is accessible only within the module.
+    - If you want a function of class to be accessed outside the module, then you have to mark it as "export".
+
+    Syntax:
+        export function Name(){}
+        export class Name{}
+    
+    - Every module can have one "default" member.
+    - Default member loads automatically.
+
+    Syntax:
+        export default function Name(){}
+    - You can import the member in a page by using "import" statement
+        import { functionName } from '../library/module.js';    // non-default members
+        import functionName from '../library/module.js';        // default members
+        import functionName, { functionName } from '../library/module.js';
+
+    - Modules are configured with the type as "module"
+        "script type="module" src="../library/module.js"> / script >"
+    
+                Javascript Classes
+    - In OOP languages, class is a program template.
+    - A template comprises of sample data and logic which you can customize according to your requirements and implement.
+    - Class is reffered as model when it is mapping with data.
+    - Class is reffered as entity when it is mapping with business. 
+    - Class is a blueprint for designing templates.
+    - In JavaScript OOP class can contain only
+        a) Property
+        b) Method
+        c) Accessor
+        d) Constructor
+    
+    - Class is a program template.
+    - Class have behavior of 
+        a) Model
+        b) Entity
+        c) Blue Print
+    - Class is reffered as model when it is mapping with data requirements.
+    - Class is reffered as entity when it is mapping with business requirements.
+    - Class is reffered as blueprint for designing templates.
+
+    How to define a class?
+    - class is defined by using 2 techniques:
+        a) Class declaration
+        b) Class expression
+    
+    - Class declaration allows to configure class with a set of specific members.
+        Syntax:
+            class className{
+
+            }
+    - Class expression allows to configure memory for class where the class can change according to state and situation.
+        Syntax:
+            var className = class{};
+
+    - Every Javascript class can contain only following members:
+            a) Property
+            b) Method
+            c) Accessor
+            d) Constructor
+    - FAQ: Can we define variable in class?
+    Ans: No, we can't define variable in class.
+
+    - FAQ: Why variable is not allowed as a class member?
+    Ans: variable is immutable. Class can't contain immutable members.
+
+    - FAQ: Then how is data stored inside a class?
+    Ans: By using Property.
+
+    Syntax:
+        class className{
+            Property = value;
+        }
+    FAQ: What is the difference between Property and variable?
+    Ans: Variable is immutable and property is mutable.
+
+    FAQ: Can we define function in class?
+    Ans: No, we can't define function in class.
+
+    FAQ: How functionality is defined in class?
+    Ans: By using Method.
+
+    Syntax:
+        class className{
+            functionName(){}
+        }
+    FAQ: What is the difference between Method and function?
+    Ans: Method is a function inside a class. Method is mutable and function is immutable.
+
+    - A class method can have variables and functions.
+    Syntax:
+        class className{
+            functionName(){
+                variable = value;
+                functionName(){}
+            }
+        }
+    
+    Class Members
+    a) Property 
+    - It is used to store data.
+    - It is mutable
+    - It can store any type of data, Primitive or Non-Primitive.
+    - You can access the class members by using instance of class.
+    - Instance is a object that refers to memory where all class memers are loaded.
+    
+    - You can assign any value into property dynamically by using instance of that class.
+    
+    b) Accessor 
+    - It is used to give a fine grained control over the property.
+    - It can control read and write features for any property.
+    - Every property can have 2 accessors
+        a) get      [getter used to read value from property]
+        b) set      [setter used to write value into property]
+    
+    - You can also use accessors to access any member of class from a multilevel hierarchy.
+
+    c) Method
+    - All method features are same as function.
+    - Parameterized.
+    - Paramterless.
+    - Arrow
+    - Rest parameters
+    - Recursion.
+    - Return Type etc...
+    Syntax:
+        class ClassName{
+            methodName(){
+                // code
+            }
+        }
+    
+    d) Constructor
+    - Constructor is a software design pattern.
+    - It is a creational pattern.
+    - It is the process of creating an instance for class.
+    - Constructor is a special type of sub-routine used for instantiation[Creating Object].
+    - Every class has a default constructor.
+    - You can add a constructor explicitly.
+    - Constructor is a special type of method[subroutine] that exectues automatically at the time of object creation.
+    - Javascript constructor is of Anonymous type.
+
+    Syntax:
+        class MyClass{
+            constructor(){
+                // code
+            }
+
+        }
+        // instantiation
+        let obj = new MyClass; // MyClass() is not necessary
+
+    - If constructor is parameterized then you have to mention about constructor at the time of instantiation.
+    - You have to pass values into constructor at the time of allocating memory for object.
+        let obj = new MyClass(params);
+    - JavaScript constructor can't be overloaded.
+    - You can't restrict constructor.
+
+    Code Reusability:
+    - You can reuse and extend code by 2 techniques.
+        a) Aggregation
+        b) Inheritance
+    - Aggregation:
+        - It is the process of access members of obe class in another without rewriting the code.
+        - It is the process of reusing without configuring any relation between class.
+        - It is often called as "Object-to-Object" communication.
+        - It is also known as "Has-A-Relation".
+
+    - Inheritance:
+        - It is the process that allows to access members of one class in another without an object.
+        - You can configure relation between class.
+        - You can access the members of existing class in current class by using "extends".
+        - Current class can extend the existing class.
+        - Existing class is known as "Super" class.
+        - Current class is known as "Derived" class.
+        - You can access the members of Super class by using "super" keyword.
+        - It is also known as "Is-A-Relation".
+
+    OOP Rule:
+    - When you create an object for derived class which is extending super class, 
+      then as per OOP rules first base class constructor is called and followed by derived class constructor.
+    
+    - But JavaScript doesn't support the above rule.
+    - You have to explicitly design the derived class constructor such that it calls the base class constructor.
+
+</pre>
